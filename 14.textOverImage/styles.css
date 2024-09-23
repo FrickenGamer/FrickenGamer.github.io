@@ -1,0 +1,38 @@
+/* Set the body and html height to 100% to ensure the image takes the full page */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* The container for the image and text */
+.background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Full-page image styling with grayscale filter */
+.background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the whole page without distortion */
+    display: block;
+    filter: grayscale(100%); /* Makes the image black and white */
+}
+
+/* Centered text overlay */
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the text box */
+    background-color: rgba(255, 0, 0, 0.7); /* Semi-transparent red background */
+    padding: 20px;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    border-radius: 10px; /* Rounded corners for the text box */
+    font-family: "Times New Roman", Times, serif; /* Use Times New Roman font */
+    border: 4px solid gold; /* Golden border around the text box */
+}
