@@ -1,0 +1,48 @@
+/* Ensure the body and html take the full height */
+html, body {
+    margin: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Container for the image */
+.image-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Style the image to cover the whole screen */
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Overlay that positions the text in the lower third */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Aligns content to the bottom */
+    padding-bottom: 10%; /* Pushes the text up from the very bottom */
+}
+
+/* Style the text box */
+.text-box {
+    background-color: rgba(128, 128, 128, 0.6); /* Grey box with some transparency */
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+
+.text-box h1 {
+    color: white;
+    font-size: 3em;
+    margin: 0;
+}
