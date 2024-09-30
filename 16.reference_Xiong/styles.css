@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+}
+
+.overlay {
+    background-image: url('images/ratLogo.jpg'); /* Background image updated */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Aligns the text box at the bottom */
+}
+
+.textbox {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-bottom: 10%; /* Adjusts the position to the lower third */
+}
+
+.textbox p {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
