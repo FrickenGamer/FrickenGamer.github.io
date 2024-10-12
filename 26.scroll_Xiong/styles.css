@@ -1,0 +1,46 @@
+/* Reset basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Container to hold the text boxes */
+.scroll-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 500vh; /* Making it tall to allow scrolling */
+}
+
+/* Style for the text boxes */
+.text-box {
+    width: 80%;
+    max-width: 800px;
+    padding: 50px;
+    margin: 100vh 0; /* Space the text boxes apart by 100vh to make sure only one is visible at a time */
+    font-size: 2rem;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* Different background colors for boxes (just in case JS fails) */
+#box1 { background-color: rgba(173, 216, 230, 0.8); } /* Light blue */
+#box2 { background-color: rgba(255, 192, 203, 0.8); } /* Light pink */
+#box3 { background-color: rgba(144, 238, 144, 0.8); } /* Light green */
+#box4 { background-color: rgba(255, 255, 224, 0.8); } /* Light yellow */
+#box5 { background-color: rgba(240, 230, 140, 0.8); } /* Khaki */
