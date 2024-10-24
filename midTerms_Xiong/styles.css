@@ -4,43 +4,39 @@ html, body {
     padding: 0;
     height: 100%;
     overflow-x: hidden; /* Prevent horizontal scrolling */
+    display: flex;
 }
 
-/* Background styling */
+/* Background image section */
 body {
-    background-size: contain; /* Show more of the background image (zoomed out) */
-    background-position: center;
+    background-position: right center;
+    background-size: contain; /* Full cover on left side */
     background-repeat: no-repeat;
 }
 
 /* Container for all text boxes */
 .content-wrapper {
     width: 100%;
-    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align text boxes to the right side */
+    padding-right: 5%; /* Padding to give some space on the right */
+    padding-left: 622px;
 }
 
-/* Styling each text box */
+/* Styling for text box */
 .text-box {
-    height: 30vh; /* Text box takes 30% of viewport height */
-    width: 60%;   /* Text box takes 60% of viewport width */
+    height: 30vh; /* Text box takes up 30% of the viewport height */
+    width: 300px;   /* Text box takes up 40% of the viewport width */
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
-    color: white;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-    font-family: Arial, sans-serif;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-    margin: 120vh auto; /* Push text boxes far apart so only one is visible */
-    padding: 20px;
-    border-radius: 10px;
-    box-sizing: border-box;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Add subtle shadow for effect */
-}
-
-/* Adding a light background for even-numbered text boxes */
-.text-box:nth-child(even) {
-    background: rgba(255, 255, 255, 0.3); /* Light background for even boxes */
     color: black;
-    text-shadow: none;
+    margin-top: 100px;
+    margin-left: -350px;
+    margin-bottom: 800px; /* Push text boxes apart vertically */
+    box-sizing: border-box;
+    text-align: center; /* Align text to the right */
+    margin-right: 1500px;
 }
