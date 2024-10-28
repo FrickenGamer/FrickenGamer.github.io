@@ -1,0 +1,43 @@
+/* Ensure body and HTML take up full viewport height */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    display: flex;
+	background-color: gold
+}
+
+/* Background image section */
+body {
+    background-position: right center;
+    background-size: contain; /* Full cover on left side */
+    background-repeat: no-repeat;
+}
+
+/* Container for all text boxes */
+.content-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align text boxes to the right side */
+    padding-right: 5%; /* Padding to give some space on the right */
+    padding-left: 622px;
+}
+
+/* Styling for text box */
+.text-box {
+    height: 30vh; /* Text box takes up 30% of the viewport height */
+    width: 300px;   /* Text box takes up 40% of the viewport width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: dimgray;
+    margin-top: 100px;
+    margin-left: -350px;
+    margin-bottom: 800px; /* Push text boxes apart vertically */
+    box-sizing: border-box;
+    text-align: center; /* Align text to the right */
+    margin-right: 1500px;
+}
