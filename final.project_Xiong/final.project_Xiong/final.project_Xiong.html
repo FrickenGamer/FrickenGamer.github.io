@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video and Audio Toggle</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Full-screen video -->
+    <video class="background-video" id="video" loop muted>
+        <source src="videos/final.video_Xiong.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Audio element -->
+    <audio id="audio" loop>
+        <source src="audios/dialogue.1_Xiong.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
+
+    <!-- Controls -->
+    <div class="controls">
+        <button id="play-button">Play Video and Audio</button>
+        <button id="switch-audio-button">Switch Audio</button>
+    </div>
+
+    <!-- Link to JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
