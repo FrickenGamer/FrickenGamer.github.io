@@ -1,44 +1,36 @@
-// JavaScript for toggling videos and remembering playback positions
+// JavaScript to control video and audio playback and toggling
 
-// Get references to the video player and text box
-const videoPlayer = document.getElementById('video-player');
-const textBox = document.getElementById('text-box');
+// Get references to video, audio, and buttons
+const video = document.getElementById('video');
+const audio = document.getElementById('audio');
+const playButton = document.getElementById('play-button');
+const switchAudioButton = document.getElementById('switch-audio-button');
 
-// Array of video sources
-const videoSources = [
-    'videos/dialogue.1_video.mp4',
-    'videos/dialogue.2_video.1.mp4'
+// Array to store audio sources
+const audioSources = [
+    'audios/dialogue.1_Xiong.mp3',
+    'audios/dialogue.2_Xiong.mp3'
 ];
 
-// Variables to track playback positions for each video
-let playbackPositions = [0, 0]; // Index 0 for video01, index 1 for video02
-let currentVideoIndex = 0; // Start with the first video
-let isMutedInitially = true; // Tracks if the videos are muted
+let currentAudioIndex = 0; // Start with the first audio
+let audioPositions = [0, 0]; // Playback positions for both audios
 
-// Function to switch to the other video
-function switchVideo() {
-    // Unmute the video if this is the first click
-    if (isMutedInitially) {
-        videoPlayer.muted = false;
-        isMutedInitially = false; // Set flag to false after the first unmute
-    }
+// Play video and audio when the "Play Video and Audio" button is clicked
+playButton.addEventListener('click', () => {
+    video.play();
+    audio.play();
+});
 
-    // Save the current video's playback position
-    playbackPositions[currentVideoIndex] = videoPlayer.currentTime;
+// Switch audio when the "Switch Audio" button is clicked
+switchAudioButton.addEventListener('click', () => {
+    // Save the current audio playback position
+    audioPositions[currentAudioIndex] = audio.currentTime;
 
-    // Determine the next video index (toggle between 0 and 1)
-    currentVideoIndex = (currentVideoIndex === 0) ? 1 : 0;
+    // Switch to the other audio
+    currentAudioIndex = (currentAudioIndex === 0) ? 1 : 0;
+    audio.src = audioSources[currentAudioIndex];
 
-    // Switch the video source and set the playback position
-    videoPlayer.src = videoSources[currentVideoIndex];
-    videoPlayer.currentTime = playbackPositions[currentVideoIndex];
-
-    // Play the new video
-    videoPlayer.play();
-}
-
-// Set initial video properties
-videoPlayer.muted = true; // Start video muted
-
-// Add event listener for clicking the text box
-textBox.addEventListener('click', switchVideo);
+    // Resume playback from the saved position
+    audio.currentTime = audioPositions[currentAudioIndex];
+    audio.play();
+});
