@@ -427,7 +427,7 @@ if (reversed == null) { reversed = false; }
 	// sunlight
 	this.sunlight_mc = new lib.sunlight();
 	this.sunlight_mc.name = "sunlight_mc";
-	this.sunlight_mc.setTransform(807.05,101.05,1,1,0,0,0,241.6,-228.3);
+	this.sunlight_mc.setTransform(774.15,105.4,1,1,0,0,0,241.6,-228.3);
 	this.sunlight_mc._off = true;
 
 	this.timeline.addTween(cjs.Tween.get(this.sunlight_mc).wait(1).to({_off:false},0).wait(1));
@@ -488,7 +488,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/Xiong_newHaiku_atlas_1.png?1740188459836", id:"Xiong_newHaiku_atlas_1"}
+		{src:"images/Xiong_newHaiku_atlas_1.png?1740188980334", id:"Xiong_newHaiku_atlas_1"}
 	],
 	preloads: []
 };
